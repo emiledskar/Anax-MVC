@@ -15,7 +15,8 @@
     ],
     "require": {
         "php": ">=5.4",
-        "mos/cdatabase": "dev-master"
+        "mos/cdatabase": "dev-master",
+        "twbs/bootstrap": "3.3.*@dev"
     },
     "require-dev": {
         "satooshi/php-coveralls": "dev-master"

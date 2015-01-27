@@ -38,7 +38,7 @@ return [
         'title_append' => ' | Anax a web template',
 
         // Stylesheets
-        'stylesheets' => ['css/style.css'],
+        'stylesheets' => ['css/style.css', ANAX_INSTALL_PATH.'vendor/twbs/bootstrap/css/bootstrap.min.css'],
 
         // Inline style
         'style' => null,
@@ -53,7 +53,7 @@ return [
         'jquery' => '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js',
 
         // Array with javscript-files to include
-        'javascript_include' => [],
+        'javascript_include' => [ANAX_INSTALL_PATH.'vendor/twbs/bootstrap/js/bootstrap.min.js'],
 
         // Use google analytics for tracking, set key or null to disable
         'google_analytics' => null,
