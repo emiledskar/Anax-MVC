@@ -1,0 +1,1 @@
+Emil Edskär läser kursen PHP MVC på distans via BTH. Han pluggar sedan 2010 till civilingenjör inom interaktion och design i Umeå. Under sina fyra år på utbildningen har han läst kurser inom Databasteknik och webbaserade system, Prototyputveckling för mobila applikationer, Produktdesign: Semantik och form, Datastrukturer och algoritmer samt Objektorienterad programmeringsmetodik.
