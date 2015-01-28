@@ -5,68 +5,56 @@
  */
 return [
 
-    // Use for styling the menu
-    'class' => 'navbar',
- 
     // Here comes the menu strcture
     'items' => [
 
         // This is a menu item
         'home'  => [
             'text'  => 'Home',
-            'url'   => $this->di->get('url')->create(''),
-            'title' => 'Home route of current frontcontroller'
+            'url'   => $this->di->get('url')->create('home'),
+            'title' => 'Home',
         ],
  
         // This is a menu item
-        'test'  => [
-            'text'  => 'Submenu',
-            'url'   => $this->di->get('url')->create('submenu'),
-            'title' => 'Submenu with url as internal route within this frontcontroller',
-
-            // Here we add the submenu, with some menu items, as part of a existing menu item
-            'submenu' => [
-
-                'items' => [
-
-                    // This is a menu item of the submenu
-                    'item 0'  => [
-                        'text'  => 'Item 0',
-                        'url'   => $this->di->get('url')->create('submenu/item-0'),
-                        'title' => 'Url as internal route within this frontcontroller'
-                    ],
-
-                    // This is a menu item of the submenu
-                    'item 2'  => [
-                        'text'  => '/humans.txt',
-                        'url'   => $this->di->get('url')->asset('/humans.txt'),
-                        'title' => 'Url to sitespecific asset',
-                        'class' => 'italic'
-                    ],
-
-                    // This is a menu item of the submenu
-                    'item 3'  => [
-                        'text'  => 'humans.txt',
-                        'url'   => $this->di->get('url')->asset('humans.txt'),
-                        'title' => 'Url to asset relative to frontcontroller',
-                    ],
-                ],
-            ],
+        'questions' => [
+            'text'  =>'Questions',
+            'url'   => $this->di->get('url')->create('questions'),
+            'title' => 'Questions'
         ],
- 
+
         // This is a menu item
-        'controller' => [
-            'text'  =>'Controller (marked for all descendent actions)',
-            'url'   => $this->di->get('url')->create('controller'),
-            'title' => 'Url to relative frontcontroller, other file',
-            'mark-if-parent-of' => 'controller',
+        'users' => [
+            'text'  =>'Users',
+            'url'   => $this->di->get('url')->create('users'),
+            'title' => 'Users'
         ],
 
+        // This is a menu item
+        'askQuestion' => [
+            'text'  =>'Ask Question',
+            'url'   => $this->di->get('url')->create('askQuestion'),
+            'title' => 'Ask Question'
+        ],        
+
+        // This is a menu item
+        'login' => [
+            'text'  =>'Login',
+            'url'   => $this->di->get('url')->create('users/login'),
+            'title' => 'Login'
+        ],
+
+        // This is a menu item
+        'logout' => [
+            'text'  =>'Logout',
+            'url'   => $this->di->get('url')->create('users/logout'),
+            'title' => 'Logout',
+        ],
+        
         // This is a menu item
         'about' => [
             'text'  =>'About',
             'url'   => $this->di->get('url')->create('about'),
-            'title' => 'Internal route within this frontcontroller'
+            'title' => 'About'
         ],
     ],
  

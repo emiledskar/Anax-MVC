@@ -15,60 +15,20 @@ h1 {
 }
 
 
-/**
- * Layout of the main page elements 
- */
-#wrapper {
-  margin: 0 auto;
-  width: 980px; 
-  padding: 10px;
-}
-
 
 /**
  * Layout for header
  */
-#header {
-  position: relative;
+.header {
   margin-bottom: 40px;
 }
 
-.sitetitle {
-  position: absolute;
-  top: 6px;
-  left: 130px;
-  font-size: 48px;
-}
 
-.siteslogan {
-  position: absolute;
-  top: 65px;
-  left: 130px;
-  font-style: italic;
-  color: #666;
+.toplists h4{
+  text-align: center;
 }
 
 
-/**
- * Layout for main
- */
-#main {
-  min-height: 20em;
-}
-
-
-/**
- * Layout for footer
- */
-#footer {
-  margin-top: 40px;
-  border-top: 1px solid #ccc;
-  padding-top: 22px;
-}
-
-.sitefooter {
-  color: #666;
-}
 
 
 /**

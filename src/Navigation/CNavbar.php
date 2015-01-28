@@ -56,7 +56,7 @@ class CNavbar
 
                 // Check if the current menuitem is selected
                 $selected = $callback($item['url'])
-                    ? "selected "
+                    ? "active "
                     : null;
                 
                 // Check if the menuitem is a parent of current page, /controller for /controller/action
@@ -78,8 +78,19 @@ class CNavbar
                     : null;
 
                 // Add the menu item
-                $url = $menu['create_url']($item['url']);
-                $html .= "\n<li{$class}><a href='{$url}' title='{$item['title']}'>{$item['text']}</a>{$submenu}</li>\n";
+                // 
+                // Modified to 
+                if( $this->di->session->get('current_user') == null ){
+                    if( $item['title'] != 'Logout' ){
+                        $url = $menu['create_url']($item['url']);
+                        $html .= "\n<li{$class}><a href='{$url}' title='{$item['title']}'>{$item['text']}</a>{$submenu}</li>\n";                        
+                    }
+                }else if( $this->di->session->get('current_user') != null ){
+                    if( $item['title'] != 'Login' ){
+                        $url = $menu['create_url']($item['url']);
+                        $html .= "\n<li{$class}><a href='{$url}' title='{$item['title']}'>{$item['text']}</a>{$submenu}</li>\n";                        
+                    }
+                }
                 
                 // To remember there is selected children when going up the menu hierarchy
                 if ($selected) {
@@ -88,7 +99,7 @@ class CNavbar
             }
 
             // Return the menu
-            return array("\n<ul>$html</ul>\n", $hasItemIsSelected);
+            return array("\n<ul class='nav nav-pills pull-right'>$html</ul>\n", $hasItemIsSelected);
         };
 
         // Call the anonomous function to create the menu, and submenues if any.

@@ -13,7 +13,7 @@ return [
      */
     'settings' => [
         'path' => ANAX_INSTALL_PATH . 'theme/',
-        'name' => 'anax-base',
+        'name' => 'anax-bootstrap',
     ],
 
     
@@ -23,6 +23,14 @@ return [
     'views' => [
         ['region' => 'header', 'template' => 'welcome/header', 'data' => [], 'sort' => -1],
         ['region' => 'footer', 'template' => 'welcome/footer', 'data' => [], 'sort' => -1],
+        [
+            'region' => 'navbar',
+            'template' => 
+            ['callback' => function() {
+                return $this->di->navbar->create();
+            },],
+            'data' => [],
+            'sort' => -1],
     ],
 
 
@@ -38,7 +46,7 @@ return [
         'title_append' => ' | Anax a web template',
 
         // Stylesheets
-        'stylesheets' => ['css/style.css', ANAX_INSTALL_PATH.'vendor/twbs/bootstrap/css/bootstrap.min.css'],
+        'stylesheets' => ['css/style.css', 'css/bootstrap.min.css'],
 
         // Inline style
         'style' => null,
@@ -53,7 +61,7 @@ return [
         'jquery' => '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js',
 
         // Array with javscript-files to include
-        'javascript_include' => [ANAX_INSTALL_PATH.'vendor/twbs/bootstrap/js/bootstrap.min.js'],
+        'javascript_include' => ['js/bootstrap.min.js', 'js/script.js'],
 
         // Use google analytics for tracking, set key or null to disable
         'google_analytics' => null,
