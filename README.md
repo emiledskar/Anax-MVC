@@ -1,5 +1,6 @@
 Silly Talk
 ============
+Silly Talk is a community to discuss silly season gossip made by Emil Edskär.
 
 Setup
 ============
