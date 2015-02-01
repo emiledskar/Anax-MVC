@@ -404,6 +404,10 @@ class UsersController implements \Anax\DI\IInjectionAware
 	        	->execute(true);
 		//print_r($user);
 	   	$this->session->set('current_user', $user );
+
+		$this->flash->setSuccessMessage('Your profile was updated');
+    	$url = $this->url->create('users/settings');
+		$this->response->redirect($url);  	
 	}
 
 
