@@ -1,4 +1,4 @@
-Anax-project
+Silly Talk
 ============
 
 Setup
