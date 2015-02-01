@@ -15,9 +15,9 @@ Thumbs.db
 
 
 # Package handling 
-composer.json
+# composer.json
 composer.lock
-
+vendor
 
 # Random files
 Todo
