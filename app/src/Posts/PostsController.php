@@ -335,7 +335,7 @@ class PostsController implements \Anax\DI\IInjectionAware
 	}
 	
 	public function commentAction($id, $parent_post = null){
-		$this->theme->setTitle('Bajs');
+		$this->theme->setTitle('Comment');
 		$this->views->add(
 			'posts/form-comment',
 			[
