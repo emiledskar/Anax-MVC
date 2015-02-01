@@ -14,11 +14,10 @@ ehthumbs.db
 Thumbs.db
 
 
-# Package handling
-# composer.json
+# Package handling 
+composer.json
 composer.lock
 vendor/.git
-vendor
 
 # Random files
 Todo

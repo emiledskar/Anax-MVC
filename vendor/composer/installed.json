@@ -1,23 +1,23 @@
 [
     {
-        "name": "mos/cform",
-        "version": "2.x-dev",
-        "version_normalized": "2.9999999.9999999.9999999-dev",
+        "name": "mos/cdatabase",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
-            "url": "https://github.com/mosbth/cform.git",
-            "reference": "5a899ed1c8fe97ffafc2fcd84db0c161c74faf6b"
+            "url": "https://github.com/mosbth/cdatabase.git",
+            "reference": "91406bffa178184b8b490432c3d8b582d1834115"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/mosbth/cform/zipball/5a899ed1c8fe97ffafc2fcd84db0c161c74faf6b",
-            "reference": "5a899ed1c8fe97ffafc2fcd84db0c161c74faf6b",
+            "url": "https://api.github.com/repos/mosbth/cdatabase/zipball/91406bffa178184b8b490432c3d8b582d1834115",
+            "reference": "91406bffa178184b8b490432c3d8b582d1834115",
             "shasum": ""
         },
         "require": {
             "php": ">=5.4"
         },
-        "time": "2015-01-21 10:14:56",
+        "time": "2015-01-21 10:13:22",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -37,12 +37,14 @@
                 "role": "Developer"
             }
         ],
-        "description": "Classes for HTML Forms",
-        "homepage": "http://dbwebb.se/",
+        "description": "PHP classes for database handling upon PDO",
+        "homepage": "http://dbwebb.se",
         "keywords": [
-            "Forms",
             "education",
-            "html"
+            "framework",
+            "micro",
+            "module",
+            "mvc"
         ]
     }
 ]
