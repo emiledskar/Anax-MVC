@@ -39,7 +39,7 @@ $app->router->add('home', function() use($app) {
     $app->views->add(
         'default/jumbotron',
         [
-            'title'   => 'SillyTalk',
+            'title'   => 'Silly Talk',
             'content' => "A place to discuss everything about football's silly season.",
         ],
         'jumbo_content'

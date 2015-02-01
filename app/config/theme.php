@@ -43,7 +43,7 @@ return [
         'lang' => 'sv',
 
         // Append this value to each <title>
-        'title_append' => ' | Anax a web template',
+        'title_append' => ' | Silly Talk',
 
         // Stylesheets
         'stylesheets' => ['css/style.css', 'css/bootstrap.min.css'],
