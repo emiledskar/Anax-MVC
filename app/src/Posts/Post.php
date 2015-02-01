@@ -24,13 +24,13 @@ class Post extends \Anax\MVC\CDatabaseModel
 
 			/* Adds default tags */
 		    $this->create([
-		        'name' => 'tag1',
+		        'name' => 'Premier League',
 		        'created' => $now,
 		    ], 'tags');
 		    $tag1 = $this->id;
 
 		    $this->create([
-		        'name' => 'tag2',
+		        'name' => 'Chelsea',
 		        'created' => $now,
 		    ], 'tags');
 		    $tag2 = $this->id;
@@ -47,40 +47,8 @@ class Post extends \Anax\MVC\CDatabaseModel
 			    ], 'postDetails');
 		
 	    $this->create([
-	        'title' => 'Question nr 2',
-	        'content' => 'Write your CSS rules without vendor prefixes (in fact, forget about them
-entirely):
-
-```css
-:fullscreen a {
-    display: flex
-}
-```
-
-Autoprefixer will use the data based on current browser popularity and property
-support to apply prefixes for you. You try in the [interactive demo]
-of Autoprefixer.
-
-```css
-:-webkit-full-screen a {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex
-}
-:-moz-full-screen a {
-    display: flex
-}
-:-ms-fullscreen a {
-    display: -ms-flexbox;
-    display: flex
-}
-:fullscreen a {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex
-}
-```',
+	        'title' => 'Benzema to PL?',
+	        'content' => 'Do you guys think Benzema will leave Real and sign with a team in the Premier League? And which team do you think is most likely to get his signature?',
 	        'created_by_user' => 2,
 	        'points' =>	1,
 	        'created' => $now,
@@ -88,19 +56,19 @@ of Autoprefixer.
 	    $post2 = $this->id;
 
 			$this->create([
-		        'name' => 'tag3',
+		        'name' => 'Real Madrid',
 		        'created' => $now,
 		    ], 'tags');
 		    $tag3 = $this->id;		
 
 	    		$this->create([
 			        'post_id' => $post2,
-			        'tag_id' => $tag1,
+			        'tag_id' => $tag3,
 			    ], 'postDetails');
 
 			    $this->create([
 			        'post_id' => $post2,
-			        'tag_id' => $tag3,
+			        'tag_id' => $tag1,
 			    ], 'postDetails');
 	}
 
