@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Mos\\' => array($vendorDir . '/mos/cdatabase/src'),
+    'Mos\\' => array($vendorDir . '/mos/cform/src'),
 );

@@ -18,6 +18,7 @@ Thumbs.db
 # composer.json
 composer.lock
 vendor/.git
+vendor
 
 # Random files
 Todo
