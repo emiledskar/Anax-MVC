@@ -15,7 +15,7 @@ h1 {
   font-size: 2.2em;
 }
 
-.hr-style{
+/*.hr-style{
     margin: 10px 0;
     border: 0;
     height: 1px;
@@ -23,7 +23,7 @@ h1 {
     background-image:    -moz-linear-gradient(left, rgba(51,122,183,0.15), rgba(51,122,183,0.85), rgba(51,122,183,0.15)); 
     background-image:     -ms-linear-gradient(left, rgba(51,122,183,0.15), rgba(51,122,183,0.85), rgba(51,122,183,0.15)); 
     background-image:      -o-linear-gradient(left, rgba(51,122,183,0.15), rgba(51,122,183,0.85), rgba(51,122,183,0.15));
-}
+}*/
 
 
 /**
@@ -47,11 +47,11 @@ footer{
   color: #777;
 }
 
-.toplist-users, .toplist-tags, .toplist-questions{
+.toplist-users, .toplist-tags, .toplist-questions, .profile-answers, .profile-comments{
   list-style: none;
 }
 
-.toplist-questions li, .toplist-users li{
+.toplist-questions li, .toplist-users li, .profile-answers li, .profile-comments li{
   border-bottom: 1px dashed #ddd;
 }
 .toplist-tags{
@@ -62,25 +62,29 @@ footer{
   margin-bottom: 3px;
 }
 
-.toplist-tags a:hover, .toplist-questions a:hover, .toplist-users a:hover{
+.toplist-tags a:hover, .toplist-questions a:hover, 
+.toplist-users a:hover, .profile-answers a:hover, 
+.profile-questions a:hover, .profile-comments a:hover{
   text-decoration: none;
 }
 
 .post-content{
+  padding-top: 20px !important;
   padding-left: 30px !important;
+  margin-bottom: 30px;
 }
 .post-rating{
+  padding-top: 20px !important;
   padding-right: 30px !important;
 }
 
 
 .post-divider{
-  
   padding: 20px 0;
-  
 }
 
-.question-content, .question-title{
+.question-content, .question-title, .profile-answers div, 
+.profile-questions div, .profile-comments div{
   overflow: hidden;
   text-overflow: ellipsis; 
   white-space: nowrap;  

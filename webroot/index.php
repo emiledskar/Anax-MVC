@@ -23,6 +23,9 @@ $app->router->add('setup', function() use ($app) {
           'action'     => 'setup'
         ]
     );
+
+    $app->flash->setInfoMessage('This application has been reset');
+    $app->response->redirect($app->url->create('home'));
 });
 
 
