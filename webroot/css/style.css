@@ -3,6 +3,7 @@
  */
 
 @import url(figure.css);
+@import url(font-awesome.css);
 
 body {
   color: #333;
@@ -14,22 +15,108 @@ h1 {
   font-size: 2.2em;
 }
 
+.hr-style{
+    margin: 10px 0;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(51,122,183,0.15), rgba(51,122,183,0.85), rgba(51,122,183,0.15)); 
+    background-image:    -moz-linear-gradient(left, rgba(51,122,183,0.15), rgba(51,122,183,0.85), rgba(51,122,183,0.15)); 
+    background-image:     -ms-linear-gradient(left, rgba(51,122,183,0.15), rgba(51,122,183,0.85), rgba(51,122,183,0.15)); 
+    background-image:      -o-linear-gradient(left, rgba(51,122,183,0.15), rgba(51,122,183,0.85), rgba(51,122,183,0.15));
+}
 
 
 /**
  * Layout for header
  */
 .header {
-  margin-bottom: 40px;
+  margin: 20px 0 40px;
 }
 
+footer{
+  margin-top: 20px;
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
 
 .toplists h4{
   text-align: center;
+  color: #777;
+}
+
+.toplist-users, .toplist-tags, .toplist-questions{
+  list-style: none;
+}
+
+.toplist-questions li, .toplist-users li{
+  border-bottom: 1px dashed #ddd;
+}
+.toplist-tags{
+
+}
+.toplist-users li{ 
+  padding-bottom: 3px;
+  margin-bottom: 3px;
+}
+
+.toplist-tags a:hover, .toplist-questions a:hover, .toplist-users a:hover{
+  text-decoration: none;
+}
+
+.post-content{
+  padding-left: 30px !important;
+}
+.post-rating{
+  padding-right: 30px !important;
 }
 
 
+.post-divider{
+  
+  padding: 20px 0;
+  
+}
 
+.question-content, .question-title{
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap;  
+}
+
+.gravatar-50{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+}
+
+.gravatar-30{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+.gravatar-20{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+
+.answers{
+}
+
+.btn-new{
+  border-color: #2e6da4 !important;
+}
 
 /**
  * For articles

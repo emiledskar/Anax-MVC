@@ -1,3 +1,4 @@
-<h1><?=$title?></h1>
+<h1 class="text-center"><?=$title?></h1>
+<hr/>
 
 <?=$content?>

@@ -30,24 +30,17 @@ return [
         ],
 
         // This is a menu item
+        'tags' => [
+            'text'  =>'Tags',
+            'url'   => $this->di->get('url')->create('tags'),
+            'title' => 'Tags'
+        ],
+
+        // This is a menu item
         'askQuestion' => [
             'text'  =>'Ask Question',
             'url'   => $this->di->get('url')->create('askQuestion'),
             'title' => 'Ask Question'
-        ],        
-
-        // This is a menu item
-        'login' => [
-            'text'  =>'Login',
-            'url'   => $this->di->get('url')->create('users/login'),
-            'title' => 'Login'
-        ],
-
-        // This is a menu item
-        'logout' => [
-            'text'  =>'Logout',
-            'url'   => $this->di->get('url')->create('users/logout'),
-            'title' => 'Logout',
         ],
         
         // This is a menu item

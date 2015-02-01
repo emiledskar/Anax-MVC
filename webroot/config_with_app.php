@@ -13,7 +13,7 @@ $app = new \Anax\Kernel\CAnax($di);
 
 //$app->navbar->configure(ANAX_APP_PATH . 'config/navbar.php');
 //$app->theme->configure(ANAX_APP_PATH . 'config/theme.php');
-$app->url->setUrlType(\Anax\Url\CUrl::URL_CLEAN);
+// $app->url->setUrlType(\Anax\Url\CUrl::URL_CLEAN);
 
 $di->session();
 
@@ -30,9 +30,18 @@ $di->set('UsersController', function() use($di) {
     $controller->setDI($di);
     return $controller;
 });
+$app->UsersController->initialize();
 
 $di->set('PostsController', function() use($di) {
     $controller = new \Anax\Posts\PostsController();
     $controller->setDI($di);
     return $controller;
 });
+$app->PostsController->initialize();
+
+$di->set('TagsController', function() use($di) {
+    $controller = new \Anax\Tags\TagsController();
+    $controller->setDI($di);
+    return $controller;
+});
+$app->TagsController->initialize();

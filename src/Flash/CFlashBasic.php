@@ -8,6 +8,7 @@ namespace Anax\Flash;
  */
 class CFlashBasic
 {
+    use \Anax\DI\TInjectable;
     /**
      * Properties
      *
@@ -25,7 +26,7 @@ class CFlashBasic
      */
     public function setMessage($message)
     {
-        $this->message = $message;
+        $this->session->set('message', $message);
     }
 
 
@@ -38,6 +39,6 @@ class CFlashBasic
      */
     public function getMessage()
     {
-        return $this->message;
+        return $this->session->get('message');
     }
 }

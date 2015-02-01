@@ -23,7 +23,6 @@ $app->router->add('setup', function() use ($app) {
           'action'     => 'setup'
         ]
     );
-
 });
 
 
@@ -35,28 +34,32 @@ $app->router->add('home', function() use($app) {
     $app->views->add(
         'default/jumbotron',
         [
-            'title'   => 'Test title',
-            'content' => 'Test',
+            'title'   => 'Welcome',
+            'content' => 'To this site',
         ],
         'jumbo_content'
     );
+    $questions = $app->PostsController->posts->getLatestQuestions();
+    $users = $app->UsersController->users->mostActiveUsers();
+    $tags = $app->TagsController->tags->popularTags();
 
     $app->views->add(
         'default/toplists',
         [
-            'toplist_questions' => array("test"),
-            'toplist_users'     => array( array('name' => 'test', 'points' => 900), array('name' => 'test2', 'points' => 999) ),
-            'toplist_tags'      => array("test2")
+            'toplist_questions' => $questions,
+            'toplist_tags'      => $tags,
+            'toplist_users'     => $users
         ],
         'toplists'
     );
 });
 
+
 $app->router->add('questions', function() use($app) {
-    $app->theme->setTitle("Questions");
+    //$app->theme->setTitle("Questions");
 
     // TODO
-    //      List questions
+    //     
     
     $app->dispatcher->forward(
         [
@@ -65,6 +68,7 @@ $app->router->add('questions', function() use($app) {
         ]
     );
 });
+
 
 $app->router->add('users', function() use($app) {
     $app->theme->setTitle("Users");
@@ -79,15 +83,40 @@ $app->router->add('users', function() use($app) {
     );
 });
 
+
+$app->router->add('tags', function() use($app) {
+    //$app->theme->setTitle("Questions");
+
+    // TODO
+    //     
+    
+    $app->dispatcher->forward(
+        [
+            'controller' => 'tags',
+            'action'    =>  'list'
+        ]
+    );
+});
+
 $app->router->add('askQuestion', function() use($app) {
     $app->theme->setTitle("Ask Question");
 
-
-    $app->views->add(
-        'posts/form',
-        [],
-        'default_page'
-    );
+    if($app->session->get('current_user') != null){
+        $app->views->add(
+            'posts/form-ask',
+            [],
+            'default_page'
+        );        
+    }else{ 
+        $app->views->add(
+            'default/jumbotron',
+            [
+                'title'   => 'You are not signed in',
+                'content' => 'Please...',
+            ],
+            'jumbo_content'
+        );
+    }
     // TODO 
     //      Check if user is logged in
     //      Display log in or sign up

@@ -80,17 +80,17 @@ class CNavbar
                 // Add the menu item
                 // 
                 // Modified to 
-                if( $this->di->session->get('current_user') == null ){
+                /*if( $this->di->session->get('current_user') == null ){
                     if( $item['title'] != 'Logout' ){
                         $url = $menu['create_url']($item['url']);
                         $html .= "\n<li{$class}><a href='{$url}' title='{$item['title']}'>{$item['text']}</a>{$submenu}</li>\n";                        
                     }
                 }else if( $this->di->session->get('current_user') != null ){
-                    if( $item['title'] != 'Login' ){
+                    if( $item['title'] != 'Login' ){*/
                         $url = $menu['create_url']($item['url']);
                         $html .= "\n<li{$class}><a href='{$url}' title='{$item['title']}'>{$item['text']}</a>{$submenu}</li>\n";                        
-                    }
-                }
+                 //   }
+                //}
                 
                 // To remember there is selected children when going up the menu hierarchy
                 if ($selected) {
