@@ -1,0 +1,1 @@
+This is a community to discuss silly season gossip made by Emil Edskär.

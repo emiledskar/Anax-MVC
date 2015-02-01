@@ -132,6 +132,31 @@ $app->router->add('askQuestion', function() use($app) {
 $app->router->add('about', function() use($app) {
     $app->theme->setTitle("About");
 
+    $content = $app->fileContent->get('about.md');
+    $content = $app->textFilter->doFilter($content, 'shortcode, markdown');
+
+    $app->views->add(
+        'default/page', 
+        [
+            'title' =>  'About this page',
+            'content' => $content,
+        ],
+        'default_page'
+    ); 
+
+    $content = $app->fileContent->get('me.md');
+    $content = $app->textFilter->doFilter($content, 'shortcode, markdown');
+
+    $app->views->add(
+        'default/page', 
+        [
+            'title' =>  'About me',
+            'content' => $content,
+        ],
+        'default_page'
+    ); 
+
+
     $app->theme->addStylesheet('css/source.css');
 
     $source = new \Mos\Source\CSource([
