@@ -9,7 +9,7 @@ require __DIR__.'/config_with_app.php';
 
 
 $app->router->add('setup', function() use ($app) {
-    
+
     $app->dispatcher->forward(
         [
           'controller' => 'users',
@@ -24,6 +24,8 @@ $app->router->add('setup', function() use ($app) {
         ]
     );
 
+    $app->session->set('current_user', null);
+
     $app->flash->setInfoMessage('This application has been reset');
     $app->response->redirect($app->url->create('home'));
 });
@@ -37,8 +39,8 @@ $app->router->add('home', function() use($app) {
     $app->views->add(
         'default/jumbotron',
         [
-            'title'   => 'Welcome',
-            'content' => 'To this site',
+            'title'   => 'SillyTalk',
+            'content' => "A place to discuss everything about football's silly season.",
         ],
         'jumbo_content'
     );
